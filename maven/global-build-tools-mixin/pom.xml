@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  #%L
+  wcm.io
+  %%
+  Copyright (C) 2014 wcm.io
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>de.provision.maven</groupId>
+  <artifactId>de.provision.maven.build-tools.global-build-tools-mixin</artifactId>
+  <version>1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>global-build-tools-mixin</name>
+  <description>Mixin that overrides some rules for static code analysis tools and IDEs.</description>
+  <url>https://github.com/pro-vision/pro-vision-build-tools</url>
+
+  <scm>
+    <connection>scm:git:git@github.com:pro-vision/pro-vision-build-tools.git</connection>
+    <developerConnection>scm:git:git@github.com:pro-vision/pro-vision-build-tools.git</developerConnection>
+    <url>https://github.com/pro-vision/pro-vision-build-tools</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <inceptionYear>2015</inceptionYear>
+
+  <organization>
+    <name>pro!vision GmbH</name>
+    <url>http://www.pro-vision.de</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>pro!vision GmbH</name>
+      <organization>pro!vision GmbH</organization>
+      <organizationUrl>http://www.pro-vision.de</organizationUrl>
+    </developer>
+  </developers>
+
+  <properties>
+
+    <!-- define default encoding for all source/resource files -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <!-- repository settings -->
+    <sonatype-snapshotRepositoryId>ossrh</sonatype-snapshotRepositoryId>
+    <sonatype-snapshotRepositoryUrl>https://oss.sonatype.org/content/repositories/snapshots</sonatype-snapshotRepositoryUrl>
+    <sonatype-releaseRepositoryId>ossrh</sonatype-releaseRepositoryId>
+    <sonatype-releaseRepositoryUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</sonatype-releaseRepositoryUrl>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <!-- Compiler configuration -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+
+      <!-- do not deploy javadocs -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <!-- Eclipse configuration -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-eclipse-plugin</artifactId>
+        <configuration>
+          <downloadSources>true</downloadSources>
+          <useProjectReferences>false</useProjectReferences>
+        </configuration>
+      </plugin>
+
+    </plugins>
+
+    <!-- plugin management -->
+    <pluginManagement>
+      <plugins>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>2.5.1</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>2.2.1</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-eclipse-plugin</artifactId>
+          <version>2.9</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.3.2</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.7</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.9</version>
+        </plugin>
+
+      </plugins>
+
+    </pluginManagement>
+
+  </build>
+
+  <profiles>
+
+    <!-- configuration to deploy into maven central -->
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <!-- sign the build -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.5</version>
+            <inherited>false</inherited>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- configure staging process at sonatype.-->
+          <plugin>
+            <groupId>org.sonatype.plugins</groupId>
+            <artifactId>nexus-staging-maven-plugin</artifactId>
+            <version>1.6.5</version>
+            <inherited>false</inherited>
+            <extensions>true</extensions>
+            <configuration>
+              <serverId>ossrh</serverId>
+              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+              <!-- Deployed artifacts should go to staging to be reviewed before publish -->
+              <autoReleaseAfterClose>false</autoReleaseAfterClose>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+  </profiles>
+
+  <distributionManagement>
+    <repository>
+      <id>${sonatype-releaseRepositoryId}</id>
+      <url>${sonatype-releaseRepositoryUrl}</url>
+    </repository>
+    <snapshotRepository>
+      <id>${sonatype-snapshotRepositoryId}</id>
+      <url>${sonatype-snapshotRepositoryUrl}</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+</project>

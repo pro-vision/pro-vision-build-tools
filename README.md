@@ -1,2 +1,2 @@
 # pro-vision-build-tools
-Open Source Build tools for pro!vision projects
+Open Source build tools for pro!vision projects

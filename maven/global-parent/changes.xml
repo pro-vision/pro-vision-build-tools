@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  #%L
+  wcm.io
+  %%
+  Copyright (C) 2014 wcm.io
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/changes/1.0.0"
+    xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
+  <body>
+
+    <release version="8" date="not released">
+      <action type="update" dev="sseifert">
+        Update to global-build-tools 8.
+      </action>
+      <action type="update" dev="sseifert">
+        Update maven-checkstyle-plugin to use Checkstyle 5.9 with JDK 1.8 support.
+      </action>
+    </release>
+
+    <release version="9" date="2014-10-24">
+      <action type="update" dev="sseifert">
+        Update to global-build-tools 7.
+      </action>
+      <action type="update" dev="sseifert">
+        Update misc. maven plugin versions to latest version.
+      </action>
+      <action type="update" dev="sseifert" issue="DINT-556">
+        Add buildnumber-maven-plugin to set build number and timestamp variables.
+      </action>
+    </release>
+
+    <release version="8" date="2014-09-08">
+      <action type="update" dev="sseifert">
+        Update to global-build-tools 6.
+        Set default JDK Version to 1.7.
+        Update some maven plugin versions.
+      </action>
+      <action type="update" dev="sseifert">
+        Activate unit tests by default.
+        Introduce "fast" profile to skip all unit tests.
+        Activate parallel test execution by default.
+      </action>
+      <action type="update" dev="sseifert">
+        Update to global-build-tools 6.
+      </action>
+    </release>
+
+    <release version="7" date="2014-06-06">
+      <action type="update" dev="sseifert">
+        Update to global-build-tools 5.
+      </action>
+      <action type="update" dev="sseifert">
+        Update static code analysis and surefire/failsafe maven plugin versions
+      </action>
+      <action type="update" dev="sseifert" issue="PVQM-14">
+        Add profile for failsafe integration tests.
+      </action>
+    </release>
+
+    <release version="6" date="2014-02-13">
+      <action type="update" dev="sseifert">
+        Update to global-build-tools 4.
+      </action>
+      <action type="update" dev="sseifert">
+        Update misc. maven plugin versions (Checkstyle, Findbugs, PMD, Cobertura and others).
+      </action>
+    </release>
+
+    <release version="5" date="2013-12-11">
+      <action type="update" dev="sseifert">
+        Update misc. maven plugin versions.
+      </action>
+      <action type="update" dev="sseifert" issue="PVI-723">
+        Remove deprecated "forkMode" parameter for surefire plugin.
+      </action>
+    </release>
+
+    <release version="4" date="2013-07-05">
+      <action type="update" dev="sseifert">
+        Update to global-build-tools 3.
+      </action>
+      <action type="update" dev="sseifert">
+        Update several maven plugin version to synch with DBS hfs global pom.
+      </action>
+      <action type="update" dev="sseifert">
+        Dependency report plugin: Disable locations fetching to speedup report generation.
+      </action>
+      <action type="add" dev="sseifert">
+        Add cobertura configuration to support cobertura coverage by default in all projects.
+      </action>
+      <action type="add" dev="sseifert">
+        Add dashboard reporting plugin for consolidated static code analysis reports.
+      </action>
+    </release>
+
+    <release version="3" date="2012-12-13">
+      <action type="update" dev="sseifert" issue="DVDI-1498">
+        Update to xml-maven-plugin 1.0 and remove xslt-maven-plugin (is replaced by xml-maven-plugin).
+      </action>
+      <action type="update" dev="sseifert">
+        Update to global-build-tools 2.
+      </action>
+    </release>
+
+    <release version="2" date="2012-11-01">
+      <action type="update" dev="sseifert" issue="PVI-484">
+        Disable javadocs reporting and most of project info reports in continuous integration builds.
+      </action>
+    </release>
+
+    <release version="1" date="2012-10-18">
+      <action type="add" dev="sseifert">
+        Initial release.
+      </action>
+    </release>
+
+  </body>
+</document>
