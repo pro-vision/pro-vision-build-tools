@@ -30,6 +30,9 @@
       <action type="update" dev="sseifert">
         Update maven-checkstyle-plugin to use Checkstyle 5.9 with JDK 1.8 support.
       </action>
+      <action type="add" dev="sseifert">
+        Add license-maven-plugin.
+      </action>
     </release>
 
     <release version="9" date="2014-10-24">
@@ -39,7 +42,7 @@
       <action type="update" dev="sseifert">
         Update misc. maven plugin versions to latest version.
       </action>
-      <action type="update" dev="sseifert" issue="DINT-556">
+      <action type="update" dev="sseifert">
         Add buildnumber-maven-plugin to set build number and timestamp variables.
       </action>
     </release>
@@ -67,7 +70,7 @@
       <action type="update" dev="sseifert">
         Update static code analysis and surefire/failsafe maven plugin versions
       </action>
-      <action type="update" dev="sseifert" issue="PVQM-14">
+      <action type="update" dev="sseifert">
         Add profile for failsafe integration tests.
       </action>
     </release>
@@ -85,7 +88,7 @@
       <action type="update" dev="sseifert">
         Update misc. maven plugin versions.
       </action>
-      <action type="update" dev="sseifert" issue="PVI-723">
+      <action type="update" dev="sseifert">
         Remove deprecated "forkMode" parameter for surefire plugin.
       </action>
     </release>
@@ -109,7 +112,7 @@
     </release>
 
     <release version="3" date="2012-12-13">
-      <action type="update" dev="sseifert" issue="DVDI-1498">
+      <action type="update" dev="sseifert">
         Update to xml-maven-plugin 1.0 and remove xslt-maven-plugin (is replaced by xml-maven-plugin).
       </action>
       <action type="update" dev="sseifert">
@@ -118,7 +121,7 @@
     </release>
 
     <release version="2" date="2012-11-01">
-      <action type="update" dev="sseifert" issue="PVI-484">
+      <action type="update" dev="sseifert">
         Disable javadocs reporting and most of project info reports in continuous integration builds.
       </action>
     </release>
