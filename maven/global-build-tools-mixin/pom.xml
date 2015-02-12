@@ -19,13 +19,12 @@
   #L%
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.build-tools.global-build-tools-mixin</artifactId>
-  <version>1-SNAPSHOT</version>
+  <version>1</version>
   <packaging>jar</packaging>
 
   <name>global-build-tools-mixin</name>
@@ -36,7 +35,7 @@
     <connection>scm:git:git@github.com:pro-vision/pv-build-tools.git</connection>
     <developerConnection>scm:git:git@github.com:pro-vision/pv-build-tools.git</developerConnection>
     <url>https://github.com/pro-vision/pv-build-tools</url>
-    <tag>HEAD</tag>
+    <tag>de.pro-vision.maven.build-tools.global-build-tools-mixin-1</tag>
   </scm>
 
   <inceptionYear>2015</inceptionYear>
