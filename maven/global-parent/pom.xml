@@ -23,12 +23,12 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>de.provision.maven</groupId>
-  <artifactId>de.provision.maven.global-parent</artifactId>
+  <groupId>de.pro-vision.maven</groupId>
+  <artifactId>de.pro-vision.maven.global-parent</artifactId>
   <version>10-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>de.provision.maven.global-parent</name>
+  <name>de.pro-vision.maven.global-parent</name>
   <description>Global parent for Maven artifact hierarchy. Defines fixed versions of Maven plugins to be used and certain general Maven settings.</description>
   <url>https://github.com/pro-vision/pro-vision-build-tools</url>
 
@@ -82,6 +82,12 @@
     <!-- Mininum maven version -->
     <maven.min-version>3.2.2</maven.min-version>
 
+    <!-- repository settings -->
+    <sonatype-snapshotRepositoryId>ossrh</sonatype-snapshotRepositoryId>
+    <sonatype-snapshotRepositoryUrl>https://oss.sonatype.org/content/repositories/snapshots</sonatype-snapshotRepositoryUrl>
+    <sonatype-releaseRepositoryId>ossrh</sonatype-releaseRepositoryId>
+    <sonatype-releaseRepositoryUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</sonatype-releaseRepositoryUrl>
+
   </properties>
 
   <dependencies>
@@ -101,8 +107,8 @@
 
       <!-- extension for build configuration -->
       <extension>
-        <groupId>de.provision.maven</groupId>
-        <artifactId>de.provision.maven.build-tools.global-build-tools</artifactId>
+        <groupId>de.pro-vision.maven</groupId>
+        <artifactId>de.pro-vision.maven.build-tools.global-build-tools</artifactId>
         <version>8-SNAPSHOT</version>
       </extension>
 
