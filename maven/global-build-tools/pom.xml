@@ -30,12 +30,12 @@
 
   <name>global-build-tools</name>
   <description>Definition of rules for static code analysis tools and IDEs.</description>
-  <url>https://github.com/pro-vision/pro-vision-build-tools</url>
+  <url>https://github.com/pro-vision/pv-build-tools</url>
 
   <scm>
-    <connection>scm:git:git@github.com:pro-vision/pro-vision-build-tools.git</connection>
-    <developerConnection>scm:git:git@github.com:pro-vision/pro-vision-build-tools.git</developerConnection>
-    <url>https://github.com/pro-vision/pro-vision-build-tools</url>
+    <connection>scm:git:git@github.com:pro-vision/pv-build-tools.git</connection>
+    <developerConnection>scm:git:git@github.com:pro-vision/pv-build-tools.git</developerConnection>
+    <url>https://github.com/pro-vision/pv-build-tools</url>
     <tag>HEAD</tag>
   </scm>
 
