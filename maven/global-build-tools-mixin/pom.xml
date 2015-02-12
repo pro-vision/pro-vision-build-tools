@@ -24,7 +24,7 @@
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.build-tools.global-build-tools-mixin</artifactId>
-  <version>1</version>
+  <version>2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>global-build-tools-mixin</name>
@@ -35,7 +35,7 @@
     <connection>scm:git:git@github.com:pro-vision/pv-build-tools.git</connection>
     <developerConnection>scm:git:git@github.com:pro-vision/pv-build-tools.git</developerConnection>
     <url>https://github.com/pro-vision/pv-build-tools</url>
-    <tag>de.pro-vision.maven.build-tools.global-build-tools-mixin-1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <inceptionYear>2015</inceptionYear>
