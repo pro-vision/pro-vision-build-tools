@@ -32,8 +32,8 @@
   <url>https://github.com/pro-vision/pv-build-tools</url>
 
   <scm>
-    <connection>scm:git:git@github.com:pro-vision/pv-build-tools.git</connection>
-    <developerConnection>scm:git:git@github.com:pro-vision/pv-build-tools.git</developerConnection>
+    <connection>scm:git:https://github.com/pro-vision/pv-build-tools.git</connection>
+    <developerConnection>scm:git:https://github.com/pro-vision/pv-build-tools.git</developerConnection>
     <url>https://github.com/pro-vision/pv-build-tools</url>
     <tag>HEAD</tag>
   </scm>
