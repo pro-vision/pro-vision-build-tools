@@ -618,12 +618,6 @@
           </dependencies>
         </plugin>
 
-        <plugin>
-          <groupId>org.mortbay.jetty</groupId>
-          <artifactId>maven-jetty-plugin</artifactId>
-          <version>6.1.26</version>
-        </plugin>
-
         <!--
           The cobertura-maven-plugin has an instrumentation configuration
           element which can be used to customize the instrumentation done
@@ -678,6 +672,12 @@
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>license-maven-plugin</artifactId>
           <version>1.8</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.mortbay.jetty</groupId>
+          <artifactId>maven-jetty-plugin</artifactId>
+          <version>6.1.26</version>
         </plugin>
 
       </plugins>
@@ -743,6 +743,44 @@
         <inherited>true</inherited>
       </plugin>
 
+      <!-- check style -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>2.14</version>
+        <inherited>true</inherited>
+        <configuration>
+          <configLocation>global-build-tools/checkstyle.xml</configLocation>
+          <encoding>UTF-8</encoding>
+          <enableRulesSummary>false</enableRulesSummary>
+          <linkXRef>false</linkXRef>
+        </configuration>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>checkstyle</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+
+      <!-- pmd -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>3.4</version>
+        <inherited>true</inherited>
+        <configuration>
+          <targetJdk>${build-compiler-target}</targetJdk>
+          <format>xml</format>
+          <linkXref>true</linkXref>
+          <sourceEncoding>utf-8</sourceEncoding>
+          <rulesets>
+            <ruleset>global-build-tools/pmd-ruleset.xml</ruleset>
+          </rulesets>
+        </configuration>
+      </plugin>
+
       <!-- taglist -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -774,27 +812,6 @@
         </configuration>
       </plugin>
 
-      <!-- check style -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>2.14</version>
-        <inherited>true</inherited>
-        <configuration>
-          <configLocation>global-build-tools/checkstyle.xml</configLocation>
-          <encoding>UTF-8</encoding>
-          <enableRulesSummary>false</enableRulesSummary>
-          <linkXRef>false</linkXRef>
-        </configuration>
-        <reportSets>
-          <reportSet>
-            <reports>
-              <report>checkstyle</report>
-            </reports>
-          </reportSet>
-        </reportSets>
-      </plugin>
-
       <!-- findbugs -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -805,23 +822,6 @@
           <xmlOutput>true</xmlOutput>
           <xmlOutputDirectory>${project.build.directory}/findbugs</xmlOutputDirectory>
           <excludeFilterFile>global-build-tools/findbugs-exclude.xml</excludeFilterFile>
-        </configuration>
-      </plugin>
-
-      <!-- pmd -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-pmd-plugin</artifactId>
-        <version>3.4</version>
-        <inherited>true</inherited>
-        <configuration>
-          <targetJdk>${build-compiler-target}</targetJdk>
-          <format>xml</format>
-          <linkXref>true</linkXref>
-          <sourceEncoding>utf-8</sourceEncoding>
-          <rulesets>
-            <ruleset>global-build-tools/pmd-ruleset.xml</ruleset>
-          </rulesets>
         </configuration>
       </plugin>
 
