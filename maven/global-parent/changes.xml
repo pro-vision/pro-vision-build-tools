@@ -23,6 +23,13 @@
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
   <body>
 
+    <release version="13" date="not released">
+      <action type="update" dev="sseifert">
+        Switch property names from build-compiler-source and build-compiler-target to build.compiler.source and build.compiler.target
+        (the old names still work as well for compatibility reasons).
+      </action>
+    </release>
+
     <release version="12" date="2015-05-28">
       <action type="update" dev="sseifert">
         Update all build and report plugins to latest versions.

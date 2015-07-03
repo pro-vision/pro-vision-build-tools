@@ -71,12 +71,16 @@
     <integrationtests-skip>true</integrationtests-skip>
 
     <!-- compiler settings (can be overridden by inheriting poms) -->
+    <!-- Please use these variable to override the settings in your POMs -->
+    <build.compiler.source>${build-compiler-source}</build.compiler.source>
+    <build.compiler.target>${build-compiler-target}</build.compiler.target>
+    <!-- DEPRECATED: old names of compiler variables (for backward compatibility) -->
     <build-compiler-source>1.7</build-compiler-source>
     <build-compiler-target>1.7</build-compiler-target>
-
+    
     <!-- pmd needs this as a global property, even in mvn 3 - may be fixed some day -->
     <!-- see http://jira.codehaus.org/browse/MPMD-86 -->
-    <targetJdk>${build-compiler-target}</targetJdk>
+    <targetJdk>${build.compiler.target}</targetJdk>
 
     <!-- Mininum maven version -->
     <maven.min-version>3.2.2</maven.min-version>
@@ -127,8 +131,8 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <inherited>true</inherited>
         <configuration>
-          <source>${build-compiler-source}</source>
-          <target>${build-compiler-target}</target>
+          <source>${build.compiler.source}</source>
+          <target>${build.compiler.target}</target>
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
@@ -484,7 +488,7 @@
           <artifactId>maven-pmd-plugin</artifactId>
           <version>3.4</version>
           <configuration>
-            <targetJdk>${build-compiler-target}</targetJdk>
+            <targetJdk>${build.compiler.target}</targetJdk>
             <format>xml</format>
             <linkXref>true</linkXref>
             <sourceEncoding>utf-8</sourceEncoding>
@@ -770,7 +774,7 @@
         <version>3.4</version>
         <inherited>true</inherited>
         <configuration>
-          <targetJdk>${build-compiler-target}</targetJdk>
+          <targetJdk>${build.compiler.target}</targetJdk>
           <format>xml</format>
           <linkXref>true</linkXref>
           <sourceEncoding>utf-8</sourceEncoding>
