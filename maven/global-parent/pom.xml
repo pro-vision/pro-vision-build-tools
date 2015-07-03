@@ -85,11 +85,11 @@
     <!-- Mininum maven version -->
     <maven.min-version>3.2.2</maven.min-version>
 
-    <!-- repository settings -->
-    <sonatype-snapshotRepositoryId>ossrh</sonatype-snapshotRepositoryId>
-    <sonatype-snapshotRepositoryUrl>https://oss.sonatype.org/content/repositories/snapshots</sonatype-snapshotRepositoryUrl>
-    <sonatype-releaseRepositoryId>ossrh</sonatype-releaseRepositoryId>
-    <sonatype-releaseRepositoryUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</sonatype-releaseRepositoryUrl>
+    <!-- distribution settings -->
+    <distribution.snapshotRepositoryId>ossrh</distribution.snapshotRepositoryId>
+    <distribution.snapshotRepositoryUrl>https://oss.sonatype.org/content/repositories/snapshots</distribution.snapshotRepositoryUrl>
+    <distribution.releaseRepositoryId>ossrh</distribution.releaseRepositoryId>
+    <distribution.releaseRepositoryUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</distribution.releaseRepositoryUrl>
 
   </properties>
 
@@ -1099,12 +1099,12 @@
 
   <distributionManagement>
     <repository>
-      <id>${sonatype-releaseRepositoryId}</id>
-      <url>${sonatype-releaseRepositoryUrl}</url>
+      <id>${distribution.releaseRepositoryId}</id>
+      <url>${distribution.releaseRepositoryUrl}</url>
     </repository>
     <snapshotRepository>
-      <id>${sonatype-snapshotRepositoryId}</id>
-      <url>${sonatype-snapshotRepositoryUrl}</url>
+      <id>${distribution.snapshotRepositoryId}</id>
+      <url>${distribution.snapshotRepositoryUrl}</url>
     </snapshotRepository>
   </distributionManagement>
 
