@@ -31,6 +31,9 @@
       <action type="update" dev="sseifert">
         Change property names for distribution settings from "sonatype-*" to "distribution-*" to allow overriding them in projects.
       </action>
+      <action type="update" dev="sseifert">
+        Add jgitflow-maven-plugin.
+      </action>
     </release>
 
     <release version="12" date="2015-05-28">
