@@ -30,6 +30,9 @@
       <action type="update" dev="sseifert">
         Add performRelease activation for release profile.
       </action>
+      <action type="update" dev="sseifert">
+        Update build and report plugins to latest versions. Set minimum Maven version to 3.2.3.
+      </action>
     </release>
 
     <release version="13" date="2015-07-06">
