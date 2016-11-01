@@ -116,7 +116,7 @@
       <extension>
         <groupId>de.pro-vision.maven</groupId>
         <artifactId>de.pro-vision.maven.build-tools.global-build-tools</artifactId>
-        <version>10</version>
+        <version>11-SNAPSHOT</version>
       </extension>
 
       <!-- SCP support for deploying sites -->
