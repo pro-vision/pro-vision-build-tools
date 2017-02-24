@@ -563,6 +563,7 @@
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
             <goals>deploy</goals>
+            <pushChanges>false</pushChanges>
           </configuration>
           <dependencies>
             <dependency>
