@@ -24,7 +24,7 @@
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.build-tools.global-build-tools</artifactId>
-  <version>14-SNAPSHOT</version>
+  <version>13</version>
   <packaging>jar</packaging>
 
   <name>global-build-tools</name>
