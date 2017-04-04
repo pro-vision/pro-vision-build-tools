@@ -24,7 +24,7 @@
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>18</version>
+  <version>19-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
@@ -66,9 +66,10 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <!-- by default, unit test execution is enabled and integration test execution is disabled -->
-    <unittests-skip>false</unittests-skip>
-    <integrationtests-skip>false</integrationtests-skip>
+    <!-- Default skip settings for unit tests and integration tests -->
+    <maven.test.skip>false</maven.test.skip>
+    <unittests.skip>${maven.test.skip}</unittests.skip>
+    <integrationtests.skip>${maven.test.skip}</integrationtests.skip>
 
     <!-- compiler settings (can be overridden by inheriting poms) -->
     <!-- Please use these variable to override the settings in your POMs -->
@@ -116,7 +117,7 @@
       <extension>
         <groupId>de.pro-vision.maven</groupId>
         <artifactId>de.pro-vision.maven.build-tools.global-build-tools</artifactId>
-        <version>12</version>
+        <version>13-SNAPSHOT</version>
       </extension>
 
       <!-- SCP support for deploying sites -->
@@ -165,7 +166,6 @@
         <inherited>true</inherited>
         <configuration>
           <skip>${unittests-skip}</skip>
-          <testFailureIgnore>false</testFailureIgnore>
           <includes>
             <include>**/*Test.java</include>
           </includes>
@@ -469,7 +469,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.0</version>
+          <version>3.6.1</version>
         </plugin>
 
         <plugin>
@@ -563,6 +563,7 @@
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
             <goals>deploy</goals>
+            <pushChanges>false</pushChanges>
           </configuration>
           <dependencies>
             <dependency>
@@ -588,7 +589,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
-          <version>2.4.3</version>
+          <version>3.0.0</version>
         </plugin>
 
         <plugin>
@@ -703,13 +704,13 @@
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.7.8</version>
+          <version>0.7.9</version>
         </plugin>
 
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>license-maven-plugin</artifactId>
-          <version>1.10</version>
+          <version>1.12</version>
         </plugin>
 
         <plugin>
@@ -835,7 +836,7 @@
       <plugin>
         <groupId>org.jacoco</groupId>
         <artifactId>jacoco-maven-plugin</artifactId>
-        <version>0.7.8</version>
+        <version>0.7.9</version>
       </plugin>
 
     </plugins>
@@ -879,7 +880,6 @@
             <inherited>true</inherited>
             <configuration>
               <skip>false</skip>
-              <testFailureIgnore>true</testFailureIgnore>
             </configuration>
           </plugin>
 
@@ -1091,6 +1091,19 @@
                         <ignore />
                       </action>
                     </pluginExecution>
+                    <pluginExecution>
+                      <pluginExecutionFilter>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>license-maven-plugin</artifactId>
+                        <versionRange>[1.7,)</versionRange>
+                        <goals>
+                          <goal>check-file-header</goal>
+                        </goals>
+                      </pluginExecutionFilter>
+                      <action>
+                        <ignore />
+                      </action>
+                    </pluginExecution>
                   </pluginExecutions>
                 </lifecycleMappingMetadata>
               </configuration>
@@ -1131,7 +1144,7 @@
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>1.6.7</version>
+            <version>1.6.8</version>
             <inherited>false</inherited>
             <extensions>true</extensions>
             <configuration>
