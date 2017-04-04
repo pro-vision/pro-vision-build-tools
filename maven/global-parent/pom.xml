@@ -24,7 +24,7 @@
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>19-SNAPSHOT</version>
+  <version>19</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
@@ -117,7 +117,7 @@
       <extension>
         <groupId>de.pro-vision.maven</groupId>
         <artifactId>de.pro-vision.maven.build-tools.global-build-tools</artifactId>
-        <version>13-SNAPSHOT</version>
+        <version>13</version>
       </extension>
 
       <!-- SCP support for deploying sites -->
