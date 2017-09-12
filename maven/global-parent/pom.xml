@@ -24,7 +24,7 @@
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>20</version>
+  <version>21-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
@@ -117,7 +117,7 @@
       <extension>
         <groupId>de.pro-vision.maven</groupId>
         <artifactId>de.pro-vision.maven.build-tools.global-build-tools</artifactId>
-        <version>13</version>
+        <version>14-SNAPSHOT</version>
       </extension>
 
       <!-- SCP support for deploying sites -->
@@ -437,7 +437,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
 
         <plugin>
@@ -457,6 +457,7 @@
             <encoding>UTF-8</encoding>
             <enableRulesSummary>false</enableRulesSummary>
             <linkXRef>false</linkXRef>
+            <excludes>**/target/**</excludes>
           </configuration>
         </plugin>
 
@@ -469,7 +470,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.1</version>
+          <version>3.7.0</version>
         </plugin>
 
         <plugin>
@@ -589,7 +590,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
 
         <plugin>
@@ -644,7 +645,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>findbugs-maven-plugin</artifactId>
-          <version>3.0.4</version>
+          <version>3.0.5</version>
           <configuration>
             <xmlOutput>true</xmlOutput>
             <xmlOutputDirectory>${project.build.directory}/findbugs</xmlOutputDirectory>
@@ -716,7 +717,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>license-maven-plugin</artifactId>
-          <version>1.13</version>
+          <version>1.14</version>
         </plugin>
 
         <plugin>
@@ -834,7 +835,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>findbugs-maven-plugin</artifactId>
-        <version>3.0.4</version>
+        <version>3.0.5</version>
         <inherited>true</inherited>
       </plugin>
 

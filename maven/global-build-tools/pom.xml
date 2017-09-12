@@ -24,7 +24,7 @@
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.build-tools.global-build-tools</artifactId>
-  <version>14-SNAPSHOT</version>
+  <version>14</version>
   <packaging>jar</packaging>
 
   <name>global-build-tools</name>
@@ -135,7 +135,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.0</version>
+          <version>3.7.0</version>
         </plugin>
 
         <plugin>
@@ -184,7 +184,7 @@
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
           <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>1.6.7</version>
+          <version>1.6.8</version>
         </plugin>
 
         <plugin>
@@ -232,7 +232,7 @@
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
             <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>1.6.7</version>
+            <version>1.6.8</version>
             <inherited>false</inherited>
             <extensions>true</extensions>
             <configuration>
