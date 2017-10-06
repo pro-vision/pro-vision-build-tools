@@ -564,7 +564,9 @@
             <useReleaseProfile>false</useReleaseProfile>
             <releaseProfiles>release</releaseProfiles>
             <goals>deploy</goals>
+            <!-- Do not push automatically on release:prepare, and allow local git checkout on release:perform -->
             <pushChanges>false</pushChanges>
+            <localCheckout>true</localCheckout>
           </configuration>
           <dependencies>
             <dependency>
