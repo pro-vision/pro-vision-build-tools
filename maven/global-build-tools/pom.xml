@@ -73,10 +73,6 @@
 
   </properties>
 
-  <prerequisites>
-    <maven>3.2.3</maven>
-  </prerequisites>
-
   <build>
     <plugins>
 
@@ -156,8 +152,6 @@
           <version>2.5.3</version>
           <configuration>
             <autoVersionSubmodules>true</autoVersionSubmodules>
-            <useReleaseProfile>false</useReleaseProfile>
-            <releaseProfiles>release</releaseProfiles>
             <goals>deploy</goals>
           </configuration>
           <dependencies>
@@ -203,7 +197,7 @@
 
     <!-- configuration to deploy into maven central -->
     <profile>
-      <id>release</id>
+      <id>release-profile</id>
       <activation>
         <property>
           <name>performRelease</name>
