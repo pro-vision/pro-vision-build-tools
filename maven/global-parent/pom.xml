@@ -932,26 +932,6 @@
 
         </plugins>
       </build>
-      <reporting>
-        <plugins>
-
-          <!-- reduce to SCM report on continuous integration build -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-project-info-reports-plugin</artifactId>
-            <inherited>true</inherited>
-            <reportSets>
-              <reportSet>
-                <reports>
-                  <report>index</report>
-                  <report>scm</report>
-                </reports>
-              </reportSet>
-            </reportSets>
-          </plugin>
-
-        </plugins>
-      </reporting>
 
     </profile>
 
@@ -1057,26 +1037,6 @@
 
         </plugins>
       </build>
-      <reporting>
-        <plugins>
-
-          <!-- reduce to SCM report on continuous integration build -->
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-project-info-reports-plugin</artifactId>
-            <inherited>true</inherited>
-            <reportSets>
-              <reportSet>
-                <reports>
-                  <report>index</report>
-                  <report>scm</report>
-                </reports>
-              </reportSet>
-            </reportSets>
-          </plugin>
-
-        </plugins>
-      </reporting>
 
     </profile>
 
