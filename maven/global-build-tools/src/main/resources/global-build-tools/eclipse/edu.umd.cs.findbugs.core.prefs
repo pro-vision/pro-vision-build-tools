@@ -1,2 +1,0 @@
-#FindBugs User Preferences
-excludefilter0=.settings/plugins/findbugs-exclude.xml|true
