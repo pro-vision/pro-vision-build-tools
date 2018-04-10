@@ -189,7 +189,7 @@
         Update to global-build-tools 9.
       </action>
     </release>
-    
+
     <release version="10" date="2015-03-02">
       <action type="update" dev="sseifert">
         Update to global-build-tools 8.

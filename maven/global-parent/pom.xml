@@ -31,7 +31,7 @@
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>24</version>
+  <version>25-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
@@ -76,7 +76,7 @@
     <!-- DEPRECATED: old names of compiler variables (for backward compatibility) -->
     <build-compiler-source>1.7</build-compiler-source>
     <build-compiler-target>1.7</build-compiler-target>
-    
+
     <!-- pmd needs this as a global property, even in mvn 3 - may be fixed some day -->
     <!-- see http://jira.codehaus.org/browse/MPMD-86 -->
     <targetJdk>${build.compiler.target}</targetJdk>
@@ -101,7 +101,7 @@
 
     </extensions>
     <plugins>
-    
+
       <!-- Site plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -153,7 +153,7 @@
       </plugins>
     </pluginManagement>
   </build>
-  
+
   <profiles>
     <!-- release-profile -->
     <profile>
