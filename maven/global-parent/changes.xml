@@ -23,9 +23,15 @@
     xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
   <body>
 
+    <release version="25" date="2018-07-11">
+      <action type="update" dev="sseifert">
+        Update io.wcm.maven.global-parent dependency to 20.
+      </action>
+    </release>
+
     <release version="24" date="2018-01-15">
       <action type="update" dev="sseifert">
-        Switch to io.wcm.maven.global-parent as parent and define only the differences.
+        Switch to io.wcm.maven.global-parent 19 as parent and define only the differences.
       </action>
     </release>
 
