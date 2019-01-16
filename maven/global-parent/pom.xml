@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.global-parent</artifactId>
-    <version>22</version>
+    <version>24</version>
     <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>28</version>
+  <version>29-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
@@ -95,8 +95,8 @@
       <!-- extension for build configuration -->
       <extension>
         <groupId>de.pro-vision.maven</groupId>
-        <artifactId>de.pro-vision.maven.build-tools.global-build-tools</artifactId>
-        <version>15</version>
+        <artifactId>de.pro-vision.maven.build-tools.global-build-tools-mixin</artifactId>
+        <version>3-SNAPSHOT</version>
       </extension>
 
     </extensions>
