@@ -96,7 +96,7 @@
       <extension>
         <groupId>de.pro-vision.maven</groupId>
         <artifactId>de.pro-vision.maven.build-tools.global-build-tools-mixin</artifactId>
-        <version>3-SNAPSHOT</version>
+        <version>3</version>
       </extension>
 
     </extensions>
