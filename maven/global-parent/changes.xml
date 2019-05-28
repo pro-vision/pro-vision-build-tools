@@ -27,6 +27,9 @@
       <action type="update" dev="sseifert">
         Update io.wcm.maven.global-parent dependency to 27.
       </action>
+      <action type="remove" dev="sseifert">
+        Remove compiler settings (inherit from parent pom).
+      </action>
     </release>
 
     <release version="31" date="2019-05-09">
