@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.global-parent</artifactId>
-    <version>26</version>
+    <version>27</version>
     <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>31</version>
+  <version>32</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
@@ -68,18 +68,6 @@
   </developers>
 
   <properties>
-
-    <!-- compiler settings (can be overridden by inheriting poms) -->
-    <!-- Please use these variable to override the settings in your POMs -->
-    <build.compiler.source>${build-compiler-source}</build.compiler.source>
-    <build.compiler.target>${build-compiler-target}</build.compiler.target>
-    <!-- DEPRECATED: old names of compiler variables (for backward compatibility) -->
-    <build-compiler-source>1.7</build-compiler-source>
-    <build-compiler-target>1.7</build-compiler-target>
-
-    <!-- pmd needs this as a global property, even in mvn 3 - may be fixed some day -->
-    <!-- see http://jira.codehaus.org/browse/MPMD-86 -->
-    <targetJdk>${build.compiler.target}</targetJdk>
 
     <!-- distribution settings -->
     <distribution.snapshotRepositoryId>ossrh</distribution.snapshotRepositoryId>
