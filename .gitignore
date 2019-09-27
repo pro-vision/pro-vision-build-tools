@@ -24,3 +24,5 @@ npm-debug.log
 .rubygems-gem-maven-plugin
 *.sublime-*
 .temp/
+
+*.iml
