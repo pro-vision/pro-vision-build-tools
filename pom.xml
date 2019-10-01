@@ -39,6 +39,7 @@
   <modules>
     <module>maven/global-parent</module>
     <module>maven/global-build-tools-mixin</module>
+    <module>maven/spring-boot-parent</module>
   </modules>
 
   <build>
