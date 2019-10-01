@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.global-parent</artifactId>
-    <version>27</version>
+    <version>28</version>
     <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>32</version>
+  <version>33</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
