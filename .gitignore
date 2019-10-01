@@ -17,12 +17,10 @@ npm-debug.log
 .pmd
 .checkstyle
 .idea
-.iml
+*.iml
 .DS_Store
 .rubygems
 .sass-cache
 .rubygems-gem-maven-plugin
 *.sublime-*
 .temp/
-
-*.iml

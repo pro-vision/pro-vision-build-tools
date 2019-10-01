@@ -131,7 +131,6 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-
     </dependencies>
   </dependencyManagement>
 
@@ -191,15 +190,6 @@
       </build>
     </profile>
   </profiles>
-
-  <repositories>
-    <repository>
-      <id>spring-milestones</id>
-      <name>Spring Milestone Repository</name>
-      <url>http://repo.spring.io/milestone</url>
-    </repository>
-  </repositories>
-
 
   <distributionManagement>
     <repository>
