@@ -81,6 +81,11 @@
     <spring-cloud.version>Greenwich.SR2</spring-cloud.version>
     <spring-cloud-netflix.version>2.1.2.RELEASE</spring-cloud-netflix.version>
     <spring-cloud-kubernetes.version>1.0.2.RELEASE</spring-cloud-kubernetes.version>
+
+    <!-- docker settings -->
+    <docker.image.repository>YOUR-DOCKER-REGISTRY</docker.image.repository>
+    <docker.image.prefix>pro-vision</docker.image.prefix>
+
   </properties>
 
   <dependencyManagement>
@@ -141,6 +146,45 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
           <version>${spring-boot.version}</version>
+        </plugin>
+        <!-- configuration to build Docker images, disabled by default -->
+        <plugin>
+          <groupId>com.spotify</groupId>
+          <artifactId>dockerfile-maven-plugin</artifactId>
+          <version>1.4.12</version>
+          <configuration>
+            <repository>${docker.image.repository}/${docker.image.prefix}/${project.artifactId}</repository>
+            <tag>${buildNumber}</tag>
+            <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+            <skip>true</skip>
+            <buildArgs>
+              <JAR_FILE>target/${project.build.finalName}.jar.original</JAR_FILE>
+            </buildArgs>
+          </configuration>
+        </plugin>
+        <!-- maven dependency plugin used to unpack the jar for docker images -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <executions>
+            <!-- unpack the resulting jar -->
+            <execution>
+              <id>unpack</id>
+              <phase>package</phase>
+              <goals>
+                <goal>unpack</goal>
+              </goals>
+              <configuration>
+                <artifactItems>
+                  <artifactItem>
+                    <groupId>${project.groupId}</groupId>
+                    <artifactId>${project.artifactId}</artifactId>
+                    <version>${project.version}</version>
+                  </artifactItem>
+                </artifactItems>
+              </configuration>
+            </execution>
+          </executions>
         </plugin>
       </plugins>
     </pluginManagement>
