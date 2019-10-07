@@ -22,7 +22,7 @@ First you need to configure the `docker.image.repository` and `docker.image.pref
 
 Afterwards you can provide a Dockerfile which needs to reference your Application's Main Class:
 ```
-FROM adoptopenjdk/openjdk11-openj9:latest
+FROM adoptopenjdk/openjdk11-openj9:alpine-jre
 VOLUME /tmp
 ARG DEPENDENCY=target/dependency
 COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
