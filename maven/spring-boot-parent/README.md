@@ -19,6 +19,24 @@ First you need to configure the `docker.image.repository` and `docker.image.pref
   <docker.image.prefix>pro-vision</docker.image.prefix>
 </properties>
 ```
+Then add the following build plugins:
+```
+ <build>
+    <plugins>
+      <plugin>
+        <groupId>com.spotify</groupId>
+        <artifactId>dockerfile-maven-plugin</artifactId>
+        <configuration>
+          <skip>false</skip>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+```
 
 Afterwards you can provide a Dockerfile which needs to reference your Application's Main Class:
 ```
