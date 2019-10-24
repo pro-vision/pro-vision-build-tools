@@ -19,20 +19,19 @@
   #L%
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>de.pro-vision.maven</groupId>
     <artifactId>de.pro-vision.maven.global-parent</artifactId>
     <version>33</version>
-    <relativePath/>
+    <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven.spring</groupId>
   <artifactId>de.pro-vision.maven.spring.spring-boot-parent</artifactId>
-  <version>1-2.1.9-SNAPSHOT</version>
+  <version>1-2.1.9</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.spring.spring-boot-parent</name>
@@ -43,7 +42,7 @@
     <connection>scm:git:https://github.com/pro-vision/pv-build-tools.git</connection>
     <developerConnection>scm:git:https://github.com/pro-vision/pv-build-tools.git</developerConnection>
     <url>https://github.com/pro-vision/pv-build-tools</url>
-    <tag>HEAD</tag>
+    <tag>de.pro-vision.maven.spring.spring-boot-parent-1-2.1.9</tag>
   </scm>
 
   <inceptionYear>2019</inceptionYear>
