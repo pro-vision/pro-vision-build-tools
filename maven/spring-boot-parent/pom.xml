@@ -158,8 +158,7 @@
         <plugin>
           <groupId>com.spotify</groupId>
           <artifactId>dockerfile-maven-plugin</artifactId>
-          <!-- Do not upgrade to 1.4.11 or later due to https://github.com/spotify/dockerfile-maven/issues/308 -->
-          <version>1.4.10</version>
+          <version>1.4.13</version>
           <configuration>
             <repository>${docker.image.repository}/${docker.image.prefix}/${project.artifactId}</repository>
             <tag>${buildNumber}</tag>
