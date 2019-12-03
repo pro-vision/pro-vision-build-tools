@@ -77,7 +77,7 @@
     <distribution.releaseRepositoryUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</distribution.releaseRepositoryUrl>
 
     <!-- versions -->
-    <spring-boot.version>2.2.1-RELEASE</spring-boot.version>
+    <spring-boot.version>2.2.1.RELEASE</spring-boot.version>
     <spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>
     <spring-cloud-netflix.version>2.2.0.RELEASE</spring-cloud-netflix.version>
     <spring-cloud-kubernetes.version>1.1.0.RELEASE</spring-cloud-kubernetes.version>
