@@ -38,10 +38,7 @@
 
   <modules>
     <module>v2.1.x</module>
-    <!--
-    Disabled as the dependencies are not available in maven central yet 
     <module>v2.2.x</module>
-    -->
   </modules>
 
   <build>
