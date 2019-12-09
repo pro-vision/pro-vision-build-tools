@@ -19,20 +19,19 @@
   #L%
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>de.pro-vision.maven</groupId>
     <artifactId>de.pro-vision.maven.global-parent</artifactId>
     <version>34</version>
-    <relativePath/>
+    <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven.spring</groupId>
   <artifactId>de.pro-vision.maven.spring.spring-boot-parent</artifactId>
-  <version>1-2.2.2-SNAPSHOT</version>
+  <version>1-2.2.2</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.spring.spring-boot-parent</name>
