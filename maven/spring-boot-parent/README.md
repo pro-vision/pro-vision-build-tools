@@ -7,6 +7,8 @@ Defines fixed versions of Spring Boot dependencies based on the following naming
 
 `<version>-<spring-boot-version>` e.g. `1-2.1.8` is the first release for Spring Boot 2.1.8. 
 
+For major version separate folders are create in this repository.
+
 ## Docker
 
 The spring-boot-parent parent provides a ready to use configuration if you want to build Docker images from your Spring Boot Project.
