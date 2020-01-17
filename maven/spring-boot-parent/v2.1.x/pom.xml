@@ -25,13 +25,13 @@
   <parent>
     <groupId>de.pro-vision.maven</groupId>
     <artifactId>de.pro-vision.maven.global-parent</artifactId>
-    <version>34</version>
+    <version>35</version>
     <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven.spring</groupId>
   <artifactId>de.pro-vision.maven.spring.spring-boot-parent</artifactId>
-  <version>2-2.1.11-SNAPSHOT</version>
+  <version>1-2.1.12</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.spring.spring-boot-parent</name>
@@ -76,7 +76,7 @@
     <distribution.releaseRepositoryUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</distribution.releaseRepositoryUrl>
 
     <!-- versions -->
-    <spring-boot.version>2.1.11.RELEASE</spring-boot.version>
+    <spring-boot.version>2.1.12.RELEASE</spring-boot.version>
     <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
     <spring-cloud-netflix.version>2.1.4.RELEASE</spring-cloud-netflix.version>
     <spring-cloud-kubernetes.version>1.0.4.RELEASE</spring-cloud-kubernetes.version>
@@ -141,6 +141,7 @@
   <build>
     <pluginManagement>
       <plugins>
+
         <plugin>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-maven-plugin</artifactId>
@@ -154,6 +155,7 @@
             </execution>
           </executions>
         </plugin>
+
         <!-- configuration to build Docker images, disabled by default -->
         <plugin>
           <groupId>com.spotify</groupId>
@@ -170,6 +172,7 @@
             </buildArgs>
           </configuration>
         </plugin>
+
         <!-- maven dependency plugin used to unpack the jar for docker images -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -194,6 +197,22 @@
             </execution>
           </executions>
         </plugin>
+
+        <!-- gitflow customization (only for this pom) -->
+        <plugin>
+          <groupId>external.atlassian.jgitflow</groupId>
+          <artifactId>jgitflow-maven-plugin</artifactId>
+          <inherited>false</inherited>
+          <configuration>
+            <!-- Prefix release numbers with artifactId for GIT repo with more than one released artifact -->
+            <flowInitContext>
+              <releaseBranchPrefix>release/${project.artifactId}-</releaseBranchPrefix>
+              <hotfixBranchPrefix>hotfix/${project.artifactId}-</hotfixBranchPrefix>
+              <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
+            </flowInitContext>
+          </configuration>
+        </plugin>
+
       </plugins>
     </pluginManagement>
   </build>
