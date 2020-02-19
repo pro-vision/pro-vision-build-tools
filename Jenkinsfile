@@ -16,10 +16,15 @@ List triggers = defaults.getTriggers()
 triggers.push(githubPush())
 
 Map config = [
-  (PROPERTIES) : [
+  (PROPERTIES)               : [
     (PROPERTIES_PIPELINE_TRIGGERS): triggers
   ],
-  (STAGE_COMPILE): [
+  (STAGE_ANALYZE)            : [
+    (MAVEN): [
+      (MAVEN_GOALS): "checkstyle:checkstyle pmd:pmd",
+    ],
+  ],
+  (STAGE_COMPILE)            : [
     (MAVEN): [
       (MAVEN_GOALS): ["clean", "deploy"],
     ]
