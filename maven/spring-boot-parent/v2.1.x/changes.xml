@@ -22,6 +22,12 @@
 <document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/changes/1.0.0"
           xsi:schemaLocation="http://maven.apache.org/changes/1.0.0 http://maven.apache.org/plugins/maven-changes-plugin/xsd/changes-1.0.0.xsd">
   <body>
+    <release version="1-2.1.13" date="2020-03-23">
+      <action type="update" dev="amuthmann">
+        Update to Spring Boot 2.1.13 and latest dependencies
+      </action>
+    </release>
+
     <release version="1-2.1.12" date="2020-01-17">
       <action type="update" dev="amuthmann">
         Update to Spring Boot 2.1.12 and latest dependencies

@@ -19,19 +19,19 @@
   #L%
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>de.pro-vision.maven</groupId>
     <artifactId>de.pro-vision.maven.global-parent</artifactId>
-    <version>35</version>
+    <version>36</version>
     <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven.spring</groupId>
   <artifactId>de.pro-vision.maven.spring.spring-boot-parent</artifactId>
-  <version>2-2.2.4-SNAPSHOT</version>
+  <version>1-2.2.5-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.spring.spring-boot-parent</name>
@@ -76,10 +76,10 @@
     <distribution.releaseRepositoryUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</distribution.releaseRepositoryUrl>
 
     <!-- versions -->
-    <spring-boot.version>2.2.4.RELEASE</spring-boot.version>
-    <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
-    <spring-cloud-netflix.version>2.2.1.RELEASE</spring-cloud-netflix.version>
-    <spring-cloud-kubernetes.version>1.1.1.RELEASE</spring-cloud-kubernetes.version>
+    <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
+    <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+    <spring-cloud-netflix.version>2.2.2.RELEASE</spring-cloud-netflix.version>
+    <spring-cloud-kubernetes.version>1.1.2.RELEASE</spring-cloud-kubernetes.version>
 
     <!-- docker settings -->
     <docker.image.repository>YOUR-DOCKER-REGISTRY</docker.image.repository>
@@ -160,8 +160,7 @@
         <plugin>
           <groupId>com.spotify</groupId>
           <artifactId>dockerfile-maven-plugin</artifactId>
-          <!-- Do not upgrade to 1.4.11 or later due to https://github.com/spotify/dockerfile-maven/issues/308 -->
-          <version>1.4.10</version>
+          <version>1.4.13</version>
           <configuration>
             <repository>${docker.image.repository}/${docker.image.prefix}/${project.artifactId}</repository>
             <tag>${buildNumber}</tag>
