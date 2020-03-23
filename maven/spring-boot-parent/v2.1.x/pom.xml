@@ -25,13 +25,13 @@
   <parent>
     <groupId>de.pro-vision.maven</groupId>
     <artifactId>de.pro-vision.maven.global-parent</artifactId>
-    <version>35</version>
+    <version>36</version>
     <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven.spring</groupId>
   <artifactId>de.pro-vision.maven.spring.spring-boot-parent</artifactId>
-  <version>2-2.1.12-SNAPSHOT</version>
+  <version>1-2.1.13-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.spring.spring-boot-parent</name>
@@ -77,9 +77,9 @@
 
     <!-- versions -->
     <spring-boot.version>2.1.12.RELEASE</spring-boot.version>
-    <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
-    <spring-cloud-netflix.version>2.1.4.RELEASE</spring-cloud-netflix.version>
-    <spring-cloud-kubernetes.version>1.0.4.RELEASE</spring-cloud-kubernetes.version>
+    <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
+    <spring-cloud-netflix.version>2.2.2.RELEASE</spring-cloud-netflix.version>
+    <spring-cloud-kubernetes.version>1.1.2.RELEASE</spring-cloud-kubernetes.version>
 
     <!-- docker settings -->
     <docker.image.repository>YOUR-DOCKER-REGISTRY</docker.image.repository>
@@ -160,8 +160,7 @@
         <plugin>
           <groupId>com.spotify</groupId>
           <artifactId>dockerfile-maven-plugin</artifactId>
-          <!-- Do not upgrade to 1.4.11 or later due to https://github.com/spotify/dockerfile-maven/issues/308 -->
-          <version>1.4.10</version>
+          <version>1.4.13</version>
           <configuration>
             <repository>${docker.image.repository}/${docker.image.prefix}/${project.artifactId}</repository>
             <tag>${buildNumber}</tag>
