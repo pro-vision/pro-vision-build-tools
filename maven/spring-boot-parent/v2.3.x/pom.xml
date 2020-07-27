@@ -31,7 +31,7 @@
 
   <groupId>de.pro-vision.maven.spring</groupId>
   <artifactId>de.pro-vision.maven.spring.spring-boot-parent</artifactId>
-  <version>1-2.1.13-SNAPSHOT</version>
+  <version>1-2.3.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.spring.spring-boot-parent</name>
@@ -76,8 +76,8 @@
     <distribution.releaseRepositoryUrl>https://oss.sonatype.org/service/local/staging/deploy/maven2/</distribution.releaseRepositoryUrl>
 
     <!-- versions -->
-    <spring-boot.version>2.1.16.RELEASE</spring-boot.version>
-    <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
+    <spring-boot.version>2.3.2.RELEASE</spring-boot.version>
+    <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
     <spring-cloud-netflix.version>2.2.3.RELEASE</spring-cloud-netflix.version>
     <spring-cloud-kubernetes.version>1.1.4.RELEASE</spring-cloud-kubernetes.version>
 
