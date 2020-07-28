@@ -25,13 +25,13 @@
   <parent>
     <groupId>io.wcm.maven</groupId>
     <artifactId>io.wcm.maven.global-parent</artifactId>
-    <version>32</version>
+    <version>34</version>
     <relativePath />
   </parent>
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>37</version>
+  <version>38-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
@@ -101,21 +101,6 @@
         </configuration>
       </plugin>
 
-      <!-- gitflow customization (only for this pom) -->
-      <plugin>
-        <groupId>external.atlassian.jgitflow</groupId>
-        <artifactId>jgitflow-maven-plugin</artifactId>
-        <inherited>false</inherited>
-        <configuration>
-          <!-- Prefix release numbers with artifactId for GIT repo with more than one released artifact -->
-          <flowInitContext>
-            <releaseBranchPrefix>release/${project.artifactId}-</releaseBranchPrefix>
-            <hotfixBranchPrefix>hotfix/${project.artifactId}-</hotfixBranchPrefix>
-            <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
-          </flowInitContext>
-        </configuration>
-      </plugin>
-
     </plugins>
     <pluginManagement>
       <plugins>
@@ -138,6 +123,32 @@
           <version>6.1.26</version>
         </plugin>
 
+        <!-- gitflow customization (only for this pom) -->
+        <plugin>
+          <groupId>com.amashchenko.maven.plugin</groupId>
+          <artifactId>gitflow-maven-plugin</artifactId>
+          <inherited>false</inherited>
+          <configuration>
+            <gitFlowConfig>
+              <releaseBranchPrefix>release/${project.artifactId}-</releaseBranchPrefix>
+              <hotfixBranchPrefix>hotfix/${project.artifactId}-</hotfixBranchPrefix>
+              <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
+            </gitFlowConfig>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>external.atlassian.jgitflow</groupId>
+          <artifactId>jgitflow-maven-plugin</artifactId>
+          <inherited>false</inherited>
+          <configuration>
+            <flowInitContext>
+              <releaseBranchPrefix>release/${project.artifactId}-</releaseBranchPrefix>
+              <hotfixBranchPrefix>hotfix/${project.artifactId}-</hotfixBranchPrefix>
+              <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
+            </flowInitContext>
+          </configuration>
+        </plugin>
+  
       </plugins>
     </pluginManagement>
   </build>
