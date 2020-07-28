@@ -19,19 +19,20 @@
   #L%
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>de.pro-vision.maven</groupId>
     <artifactId>de.pro-vision.maven.global-parent</artifactId>
     <version>37</version>
-    <relativePath />
+    <relativePath/>
   </parent>
 
   <groupId>de.pro-vision.maven.spring</groupId>
   <artifactId>de.pro-vision.maven.spring.spring-boot-parent</artifactId>
-  <version>1-2.1.16</version>
+  <version>1-2.3.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.spring.spring-boot-parent</name>
@@ -158,17 +159,15 @@
 
         <!-- configuration to build Docker images, disabled by default -->
         <plugin>
-          <groupId>com.spotify</groupId>
-          <artifactId>dockerfile-maven-plugin</artifactId>
-          <version>1.4.13</version>
+          <groupId>com.google.cloud.tools</groupId>
+          <artifactId>jib-maven-plugin</artifactId>
+          <version>2.4.0</version>
           <configuration>
-            <repository>${docker.image.repository}/${docker.image.prefix}/${project.artifactId}</repository>
-            <tag>${buildNumber}</tag>
-            <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+            <to>
+              <image>${docker.image.repository}/${docker.image.prefix}/${project.artifactId}</image>
+              <tags>${scmBranch}</tags>
+            </to>
             <skip>true</skip>
-            <buildArgs>
-              <JAR_FILE>target/${project.build.finalName}.jar.original</JAR_FILE>
-            </buildArgs>
           </configuration>
         </plugin>
 
