@@ -208,6 +208,8 @@
               <hotfixBranchPrefix>hotfix/${project.artifactId}-</hotfixBranchPrefix>
               <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
             </gitFlowConfig>
+            <versionDigitToIncrement>0</versionDigitToIncrement>
+            <commitMessagePrefix>[gitflow-maven-plugin] </commitMessagePrefix>
           </configuration>
         </plugin>
         <plugin>
