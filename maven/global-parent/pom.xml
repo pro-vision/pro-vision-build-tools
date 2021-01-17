@@ -31,7 +31,7 @@
 
   <groupId>de.pro-vision.maven</groupId>
   <artifactId>de.pro-vision.maven.global-parent</artifactId>
-  <version>39</version>
+  <version>40-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>de.pro-vision.maven.global-parent</name>
